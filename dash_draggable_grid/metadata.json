@@ -1,8 +1,51 @@
 {
   "src/lib/components/DashDraggableGrid.react.js": {
-    "description": "ExampleComponent is an example component.\r\nIt takes a property, `label`, and\r\ndisplays it.\r\nIt renders an input with the property `value`\r\nwhich is editable by the user.",
+    "description": "GridComponent is an dash component.\r\nIt takes a property, `id`, and children to\r\ndisplays it.",
     "displayName": "DashDraggableGrid",
-    "methods": [],
+    "methods": [
+      {
+        "name": "onLayoutChange",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "layout",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "makeditable",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "generateLayout",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "onBreakpointChange",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "breakpoint",
+            "type": null
+          },
+          {
+            "name": "cols",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
     "props": {
       "id": {
         "type": {
@@ -15,8 +58,40 @@
         "type": {
           "name": "string"
         },
-        "required": true,
+        "required": false,
         "description": "A label that will be printed when this component is rendered."
+      },
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "node"
+              }
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The children components displayed inside the grid."
+      },
+      "editable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "The editing property displayed inside the grid."
+      },
+      "position": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "The layout of the  components displayed inside the grid."
       },
       "value": {
         "type": {

@@ -1,8 +1,8 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
-''DashDraggableGrid <- function(id=NULL, label=NULL, value=NULL) {
+''DashDraggableGrid <- function(children=NULL, id=NULL, label=NULL, editable=NULL, position=NULL, value=NULL) {
     
-    props <- list(id=id, label=label, value=value)
+    props <- list(children=children, id=id, label=label, editable=editable, position=position, value=value)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -10,7 +10,7 @@
         props = props,
         type = 'DashDraggableGrid',
         namespace = 'dash_draggable_grid',
-        propNames = c('id', 'label', 'value'),
+        propNames = c('children', 'id', 'label', 'editable', 'position', 'value'),
         package = 'dashDraggableGrid'
         )
 
